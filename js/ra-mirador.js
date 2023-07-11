@@ -11,6 +11,12 @@ window.onload = () => {
         processedPoi.media.forEach((mediaItem) => {
           procMedia.push(ARdata.mediaOrigin + mediaItem);
         });
+
+        if(processedPoi.iconSpot.length>1)
+        {
+          processedPoi.iconSpot=ARdata.mediaOrigin + processedPoi.iconSpot;
+        }
+
         processedPoi.media = procMedia;
         data.push(processedPoi);
       });
@@ -45,6 +51,7 @@ function renderData() {
       `latitude: ${latitude}; longitude: ${longitude};`
     );
     element.setAttribute("clickhandler", "");
+    
     element.setAttribute("src", arPoint.iconSpot.length>1?arPoint.iconSpot:"#info-icon");
     element.setAttribute("look-at", "[gps-camera]");
     element.setAttribute("height", "15");

@@ -2,7 +2,7 @@ const ARdata={
     "mediaOrigin":"data/media/",
     "pois":[
         {
-            "iconSpot":"#4d-sede",
+            "iconSpot":"4d-sede.png",
             "name": "4D Geoservices",
             "brief":[
                 "This is a slide, 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nisi vitae nisl feugiat imperdiet eu et nunc. Suspendisse sit amet molestie mi. Aliquam faucibus justo a rutrum finibus. Pellentesque posuere odio eu elit elementum fermentum. Morbi vel nulla vitae diam ullamcorper ultricies.Phasellus in hendrerit enim. Vestibulum pretium orci eget odio mollis, eu vestibulum nunc facilisis. Sed hendrerit quam sed velit tempor, eu fermentum quam euismod. Ut vitae purus interdum, eleifend libero vitae, vulputate magna.",
@@ -13,7 +13,7 @@ const ARdata={
             "coordinates": [-3.7874293327331543, 37.768925267300446]
         },
         {
-            "iconSpot":"#pl-batallas",
+            "iconSpot":"pl-batallas.png",
             "name": "Plaza de las Batallas",
             "brief":[
                 "This is a slide, 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nisi vitae nisl feugiat imperdiet eu et nunc. Suspendisse sit amet molestie mi. Aliquam faucibus justo a rutrum finibus. Pellentesque posuere odio eu elit elementum fermentum. Morbi vel nulla vitae diam ullamcorper ultricies.Phasellus in hendrerit enim. Vestibulum pretium orci eget odio mollis, eu vestibulum nunc facilisis. Sed hendrerit quam sed velit tempor, eu fermentum quam euismod. Ut vitae purus interdum, eleifend libero vitae, vulputate magna.",
