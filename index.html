@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Mirador 1</title>
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.flatly.min.css" />
     <link rel="stylesheet" href="lib/swipper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/ra-mirador.css">
 
@@ -12,7 +13,7 @@
     <script src="lib/arjs/aframe-ar.js"></script>
     <script src="lib/arjs/aframe-extras.loaders.min.js"></script>
     <script src="lib/arjs/aframe-look-at-component.min.js"></script>
-    <script src="data/data-ra-mirador-1.js"></script>
+    <script src="data/ar-data.js"></script>
     <script src="js/checkgeo.js"></script>
     <script src="js/ra-mirador.js"></script>
     <script>
@@ -60,6 +61,14 @@
         custom-field="a-text"
       ></a-text>
 
+      <!--<a-image src="#info-icon" 
+      look-at="[gps-camera]"
+      height="20"
+      width="20"
+      clickhandler
+      gps-entity-place="latitude: 37.768925267300446; longitude: -3.7874293327331543;">
+    </a-image>-->
+
     <a-camera  arjs-look-controls='smoothingFactor: 0.1' gps-camera="gpsMinDistance: 5;minDistance: 30;maxDistance: 350;accelerationToMove: 1.0;" rotation-reader></a-camera>
 
 
@@ -74,13 +83,13 @@
       aria-labelledby="myLargeModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-fullscreen">
+      <div class="modal-dialog modal-lg modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-header">
-            <img class="modal-title-img" src="img/info.svg"><h5 class="modal-title"><span id="poi-title"></span></h5>
+          <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title"><span id="poi-title"></span></h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
