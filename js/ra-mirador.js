@@ -47,8 +47,8 @@ function renderData() {
     element.setAttribute("clickhandler", "");
     element.setAttribute("src", arPoint.iconSpot.length>1?arPoint.iconSpot:"#info-icon");
     element.setAttribute("look-at", "[gps-camera]");
-    element.setAttribute("height", "10");
-    element.setAttribute("width", "10");
+    element.setAttribute("height", "15");
+    element.setAttribute("width", "15");
     element.setAttribute("ardataid", "" + index);
     /*element.addEventListener('click', (event) => {
             alert("Click");
@@ -59,8 +59,8 @@ function renderData() {
     let marginElement = document.createElement("a-plane");
     marginElement.setAttribute("clickhandler", "");
     marginElement.setAttribute("visible", "false");
-    marginElement.setAttribute("height", "60");
-    marginElement.setAttribute("width", "60");
+    marginElement.setAttribute("height", "90");
+    marginElement.setAttribute("width", "90");
     marginElement.setAttribute("ardataid", "" + index);
 
     element.appendChild(marginElement);
