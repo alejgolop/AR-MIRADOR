@@ -12,9 +12,8 @@ window.onload = () => {
           procMedia.push(ARdata.mediaOrigin + mediaItem);
         });
 
-        if(processedPoi.iconSpot.length>1)
-        {
-          processedPoi.iconSpot=ARdata.mediaOrigin + processedPoi.iconSpot;
+        if (processedPoi.iconSpot.length > 1) {
+          processedPoi.iconSpot = ARdata.mediaOrigin + processedPoi.iconSpot;
         }
 
         processedPoi.media = procMedia;
@@ -51,8 +50,11 @@ function renderData() {
       `latitude: ${latitude}; longitude: ${longitude};`
     );
     element.setAttribute("clickhandler", "");
-    
-    element.setAttribute("src", arPoint.iconSpot.length>1?arPoint.iconSpot:"#info-icon");
+
+    element.setAttribute(
+      "src",
+      arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
+    );
     element.setAttribute("look-at", "[gps-camera]");
     element.setAttribute("height", "15");
     element.setAttribute("width", "15");
@@ -88,13 +90,14 @@ function showPOI(poi) {
     poi.media.forEach((media, index) => {
       const mediaTitle = "Multimedia " + poi.name + " " + (index + 1);
 
-      var extension=media.substring(media.lastIndexOf('.'));
+      var extension = media.substring(media.lastIndexOf("."));
       var newElem;
-      if (['.mp4','.webm','.avi'].includes(extension)) 
-      {// Is a Video
-        newElem=`<div class="swiper-slide"><video controls><source src="${media}" type="video/mp4"></video></div>`;
-      }else{// Is an Image
-        newElem=`<div class="swiper-slide"><img src="${media}?rnd=${ Math.random()}" title="${mediaTitle}" alt="${mediaTitle}"></div>`;
+      if ([".mp4", ".webm", ".avi"].includes(extension)) {
+        // Is a Video
+        newElem = `<div class="swiper-slide"><video controls><source src="${media}" type="video/mp4"></video></div>`;
+      } else {
+        // Is an Image
+        newElem = `<div class="swiper-slide"><img src="${media}?rnd=${Math.random()}" title="${mediaTitle}" alt="${mediaTitle}"></div>`;
       }
       $(".swiper-wrapper").append(newElem);
     });
@@ -124,4 +127,12 @@ function showPOI(poi) {
     $("#poi-body").append(`<p>${paragraph}</p>`);
   });
   $("#modal-poi").modal("show");
+}
+
+function stopVideos() {
+  var videos = document.getElementsByTagName("video");
+  for (let video of videos) {
+    video.pause();
+    video.currentTime = 0;
+  }
 }

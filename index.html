@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mirador 1</title>
+    <title>AR-MIRADOR</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.flatly.min.css" />
     <link rel="stylesheet" href="lib/swipper/swiper-bundle.min.css" />
@@ -92,6 +93,7 @@
               class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
+              onClick="stopVideos()"
             ></button>
           </div>
           <div class="modal-body container">
@@ -114,8 +116,8 @@
               <div class="swiper-pagination"></div>
             
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev" onClick="stopVideos()"></div>
+              <div class="swiper-button-next" onClick="stopVideos()"></div>
             
             </div>
             <div class="container" id="poi-body"></div>
