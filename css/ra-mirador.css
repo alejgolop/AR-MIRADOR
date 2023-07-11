@@ -1,0 +1,44 @@
+.arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+  }
+.arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+
+  .modal-title-img{
+    height: 24px;
+    margin-right: 5px;
+  }
+
+  .modal-title-img{
+    height: 24px;
+    margin-right: 5px;
+  }
+  
+  .swiper-slide img{
+    width: 100%;
+  }
+  
+  .swiper{
+    margin-bottom: 20px;
+  }
+  
+  .swiper-button-next, .swiper-button-prev{
+    color:#fff;
+  }
+  
+  .swiper-pagination-bullet-active{
+    background: #fff;
+  }
