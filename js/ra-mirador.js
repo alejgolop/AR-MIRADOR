@@ -45,7 +45,7 @@ function renderData() {
       `latitude: ${latitude}; longitude: ${longitude};`
     );
     element.setAttribute("clickhandler", "");
-    element.setAttribute("src", "#info-icon");
+    element.setAttribute("src", arPoint.iconSpot.length>1?arPoint.iconSpot:"#info-icon");
     element.setAttribute("look-at", "[gps-camera]");
     element.setAttribute("height", "10");
     element.setAttribute("width", "10");
