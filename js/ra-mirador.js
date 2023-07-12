@@ -26,6 +26,7 @@ window.onload = () => {
       howTo();
     }
   });
+  $('.arjs-loader').addClass('invisible');
 };
 
 function howTo() {
