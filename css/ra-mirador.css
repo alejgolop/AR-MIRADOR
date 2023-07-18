@@ -68,3 +68,16 @@
   }
 
   .invisible{display:none;}
+
+  #lang-img{
+    padding: 20px;
+
+  }
+
+  .lang-selector{
+    align-items: center;
+    margin:0;
+  }
+
+
+  

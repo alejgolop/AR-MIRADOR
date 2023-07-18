@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.flatly.min.css" />
     <link rel="stylesheet" href="lib/swipper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fab.css">
     <link rel="stylesheet" href="css/ra-mirador.css">
+
+
 
     <script src="lib/arjs/aframe.min.js"></script>
     <script src="lib/arjs/aframe-ar.js"></script>
@@ -16,6 +19,7 @@
     <script src="lib/arjs/aframe-look-at-component.min.js"></script>
     <script src="data/ar-data.js"></script>
     <script src="js/checkgeo.js"></script>
+    <script src="js/translate-ui.js"></script>
     <script src="js/ra-mirador.js"></script>
     <script>
       AFRAME.registerComponent("clickhandler", {
@@ -34,8 +38,15 @@
   </head>
 
   <body style="margin: 0; overflow: hidden">
-      <div class="arjs-loader">
-      <div>Cargando, por favor espere...</div>
+
+    <div class="fabs" role="group" aria-label="Floating action buttons">
+      <!-- buttons will go here -->
+      <button  id="chooseLang-btn" class="btn btn-primary fab" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
+        <img aria-hidden="true" src="img/language.svg" width="32" height="32" />
+      </button>
+    </div>
+      <div class="arjs-loader invisible">
+      <div></div>
     </div>
     <a-scene
       cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;"
@@ -116,8 +127,8 @@
               <div class="swiper-pagination"></div>
             
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev" onClick="stopVideos()"></div>
-              <div class="swiper-button-next" onClick="stopVideos()"></div>
+              <div class="swiper-button-prev" title="" onClick="stopVideos()"></div>
+              <div class="swiper-button-next" title="" onClick="stopVideos()"></div>
             
             </div>
             <div class="container" id="poi-body"></div>

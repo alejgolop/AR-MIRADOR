@@ -1,7 +1,22 @@
+
+
 var data;
 var swiper = undefined;
 
 window.onload = () => {
+  changeLang(language.code);
+  if(availableLanguages.length<2)
+  {
+    $("#chooseLang-btn").addClass("invisible");
+  }else{
+    openChooseLangModal();
+  }
+
+  
+};
+
+function loadData()
+{
   checkGeo().then((success) => {
     if (success) {
       data = [];
@@ -27,15 +42,15 @@ window.onload = () => {
     }
   });
   $('.arjs-loader').addClass('invisible');
-};
+}
 
 function howTo() {
   Swal.fire({
     icon: "info",
-    title: "Realidad Aumentada",
-    text: "Por favor, para un correcto funcionamiento mantén activada la localización del dispositivo móvil y permanece en zonas al aire libre.",
+    title: langStrings[language.code]["ar-advise-title"],
+    text: langStrings[language.code]["ar-advise-msg"],
     showDenyButton: false,
-    confirmButtonText: "Entendido",
+    confirmButtonText:langStrings[language.code]["acknowledge"],
   });
 }
 
@@ -124,10 +139,15 @@ function showPOI(poi) {
 
   $("#poi-title").text(poi.name);
   $("#poi-body").empty();
-  poi.brief.forEach((paragraph) => {
+  poi.brief[language.code].forEach((paragraph) => {
     $("#poi-body").append(`<p>${paragraph}</p>`);
   });
   $("#modal-poi").modal("show");
+
+  $(".swiper-button-prev").attr("title",langStrings[language.code]["previous"]);
+  $(".swiper-button-next").attr("title",langStrings[language.code]["next"]);
+  $(".btn-close").attr("title",langStrings[language.code]["close"]);
+
 }
 
 function stopVideos() {

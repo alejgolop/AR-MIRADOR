@@ -3,10 +3,10 @@ var geoPermissionStatus;
 function noGeolocationModal() {
   Swal.fire({
     icon: "error",
-    title: "Activa la Geolocalización",
-    text: "Por favor, para un correcto funcionamiento mantén activada la localización del dispositivo móvil.",
+    title: langStrings[language.code]["geo-advise-title"],
+    text: langStrings[language.code]["geo-advise-msg"],
     showDenyButton: false,
-    confirmButtonText: "Ya la he activado",
+    confirmButtonText: langStrings[language.code]["geo-advise-check"],
   }).then((result) => {
     window.location = "";
   });
