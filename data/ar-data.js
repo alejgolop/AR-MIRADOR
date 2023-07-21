@@ -1,4 +1,5 @@
 const ARdata={
+    "name":"AR EXAMPLE - 4D Geoservices",
     "mediaOrigin":"data/media/",
     "pois":[
         {

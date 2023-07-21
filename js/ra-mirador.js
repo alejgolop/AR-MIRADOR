@@ -1,5 +1,3 @@
-
-
 var data;
 var swiper = undefined;
 
