@@ -5,8 +5,10 @@ window.onload = () => {
   changeLang(language.code);
   if(availableLanguages.length<2)
   {
-    $("#chooseLang-btn").addClass("invisible");
+    
+    loadData();
   }else{
+    $("#chooseLang-btn").removeClass("invisible");
     openChooseLangModal();
   }
 

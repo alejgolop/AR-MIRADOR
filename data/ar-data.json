@@ -1,4 +1,4 @@
-const ARdata={
+{
     "name":"AR EXAMPLE - 4D Geoservices",
     "mediaOrigin":"data/media/",
     "pois":[
@@ -39,4 +39,4 @@ const ARdata={
             "coordinates": [-3.788387246557164, 37.77062536822906]
         }
     ]
-};
+}

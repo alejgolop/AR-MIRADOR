@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="css/ra-mirador.css">
 
 
-
+    
     <script src="lib/arjs/aframe.min.js"></script>
     <script src="lib/arjs/aframe-ar.js"></script>
     <script src="lib/arjs/aframe-extras.loaders.min.js"></script>
     <script src="lib/arjs/aframe-look-at-component.min.js"></script>
-    <script src="data/ar-data.js"></script>
+    
+    <script src="js/data-loader.js"></script>
     <script src="js/checkgeo.js"></script>
     <script src="js/translate-ui.js"></script>
     <script src="js/ra-mirador.js"></script>
@@ -42,7 +43,7 @@
 
     <div class="fabs" role="group" aria-label="Floating action buttons">
       <!-- buttons will go here -->
-      <button  id="chooseLang-btn" class="btn btn-primary fab" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
+      <button  id="chooseLang-btn" class="btn btn-primary fab invisible" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
         <img aria-hidden="true" src="img/language.svg" width="32" height="32" />
       </button>
     </div>
